@@ -1,33 +1,53 @@
 @import url('https://fonts.googleapis.com/css2?family=Fredericka+the+Great&display=swap');
-
-main {
+*{
+  font-family: 'Fredericka the Great', cursive;
+  color: #cecece;
+  cursor:default; /*no quiero el selector de texto en el marcador*/
+}
+body{
   display: flex;
-  align-items: center;
-  justify-content: center;
+  background-image: url(img/163c82a62637c4079e5f4581582cc0d0.jpg);
+  background-position: center;
+  background-size: 1450px 800px ;
+  background-repeat: no-repeat;
 }
 
+main {
+  display: block;
+  margin-left: 10%;
+  margin-top: 2%;
+}
+aside{
+  font-size: 50px;
+  margin-left: 8%;
+}
+.marcador{
+  margin-top: 7%;
+  margin-left: 6%;
+  font-size: 70px;
+}
+.fila{
+  display: flex;
+  gap: 5px;
+}
 .casilla {
   display: flex;
   align-items: center;
   justify-content: center;
-  width: 200px;
-  height: 200px;
+  width: 150px;
+  height: 150px;
+  margin-top: 5px;
 
   font-size: 150px;
   font-family: 'Fredericka the Great', cursive;
 
-  border-radius: 0px;
-  border: 1px groove rgb(128, 73, 73);
+  border: solid 3px #cecece; 
 
-  border-radius: 35px;
-  background: #ededed;
-  box-shadow: 9px 9px 28px #6f6f6f,
-    -9px -9px 28px #ffffff;
+  text-decoration: none;
 }
 
-.casilla:active {
+.casilla:hover {
   cursor: pointer;
-  animation: flip-scale-up-hor 0.8s linear both;
 }
 
 
