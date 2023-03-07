@@ -17,20 +17,17 @@ main {
   font-family: 'Fredericka the Great', cursive;
 
   border-radius: 0px;
-  border: 1px groove rgb(150, 87, 87);
+  border: 1px groove rgb(128, 73, 73);
 
   border-radius: 35px;
   background: #ededed;
   box-shadow: 9px 9px 28px #6f6f6f,
     -9px -9px 28px #ffffff;
-
-
 }
 
 .casilla:active {
   cursor: pointer;
   animation: flip-scale-up-hor 0.8s linear both;
-
 }
 
 
