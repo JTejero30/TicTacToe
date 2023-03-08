@@ -1,7 +1,9 @@
 let main, casilla, casillaLong, numero, turno, marcador, jugadorX, ganadasX, ganadasO
 
+
 main = document.getElementsByTagName('main')[0];
 casilla = document.getElementsByClassName('casilla');
+
 
 
 for (let i = 0; i < casilla.length; i++) {
@@ -14,7 +16,9 @@ for (let i = 0; i < casilla.length; i++) {
 /*funcion ponerFicha
 @param numero de casilla
 */
+
 turno = true
+
 function ponerFicha(numero) {
 
     do{
@@ -37,6 +41,7 @@ function ponerFicha(numero) {
 @param jugador que es tratado como string X u O y asi comparar fichas de uno y de otro en la misma funcion */ 
 
 function ganar(jugador) {
+    
     let victoria= false
     let ganadoras = [
         //filas
@@ -60,13 +65,14 @@ function ganar(jugador) {
     }
     for (let j = 0; j < ganadoras.length; j++) {
         if (fichas.includes(ganadoras[j][0])&&(fichas.includes(ganadoras[j][1]))&&(fichas.includes(ganadoras[j][2]))) {
-            victoria=true
-            alert('ganan')
+            cambiarMarcador();
+            
         }
         
     }
-    return victoria
+   
 }
+
 
 /*****************MARCADOR*******************/
 marcador=document.getElementsByClassName('marcador')[0]
@@ -77,10 +83,12 @@ marcador.appendChild(jugadorX)
 jugadorO=document.createElement('div')
 jugadorO.setAttribute('class','jugadorO')
 jugadorO.textContent=`Jugador O: ${ganadasO}`
-marcador.appendChild(jugadorO) 
+marcador.appendChild(jugadorO)  
+
 
 function cambiarMarcador() {
-    
+    ganadasO=0;
+    ganadasX=0;
 }
 
 
