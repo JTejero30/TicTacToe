@@ -48,19 +48,60 @@ aside{
 
 .casilla:hover {
   cursor: pointer;
+  
 }
 
+.reset{
+  animation:flip-scale-up-ver .5s linear both;
+}
+#reset2{
+  animation:flip-scale-up-ver .5s linear both;
+}
 
-@keyframes flip-scale-up-hor {
+/* @keyframes flip-scale-up-hor {
   0% {
-    transform: scale(1) rotateX(0);
+    -webkit-transform: scale(1) rotateX(0);
+            transform: scale(1) rotateX(0);
   }
-
   50% {
-    transform: scale(2.5) rotateX(-90deg);
+    -webkit-transform: scale(2.5) rotateX(-90deg);
+            transform: scale(2.5) rotateX(-90deg);
   }
-
   100% {
-    transform: scale(1) rotateX(-180deg);
+    -webkit-transform: scale(1) rotateX(-180deg);
+            transform: scale(1) rotateX(-180deg);
+  } */
+
+  @keyframes flip-scale-up-ver {
+    0% {
+      -webkit-transform: scale(1) rotateY(0);
+              transform: scale(1) rotateY(0);
+    }
+    50% {
+      -webkit-transform: scale(2.5) rotateY(90deg);
+              transform: scale(2.5) rotateY(90deg);
+    }
+    100% {
+      -webkit-transform: scale(1) rotateY(180deg);
+              transform: scale(1) rotateY(180deg);
+    }
   }
-}
+  @keyframes flip-scale-down-ver{0%{transform:scale(1) rotateY(0)}50%{transform:scale(.4) rotateY(-90deg)}100%{transform:scale(1) rotateY(-180deg)}}
+
+  .temp{
+display: flex;
+
+    width: 2%;
+    margin-top: 2%;
+
+    font-size: 100px;
+  }
+  .icono{
+    font-size: 40px;
+    width: 20%;
+    margin-top: 80%;
+  }
+  .temporizador{
+
+  
+  }
